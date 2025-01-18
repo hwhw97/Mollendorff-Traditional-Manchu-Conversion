@@ -8,6 +8,12 @@
 
 ## 使用方法
 
+```bash
+git clone https://github.com/hwhw97/Mollendorff-Traditional-Manchu-Conversion.git
+cd Mollendorff-Traditional-Manchu-Conversion
+```
+
+
 - 自动识别输入的文本是传统满文还是穆麟德转写式满文，并互相转换
 ```python
 from convert_manscript import convert_manscript
