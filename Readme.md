@@ -13,7 +13,7 @@
 ## 使用方法
 
 ### 在线使用 Demo
-点击使用在线版 [Demo](https://hwhw97.github.io/Mollendorff-Traditional-Manchu-Conversion)
+点击使用在线版 <a href="https://hwhw97.github.io/Mollendorff-Traditional-Manchu-Conversion" target="_blank">Demo</a>
 
 
 Demo 更新记录
