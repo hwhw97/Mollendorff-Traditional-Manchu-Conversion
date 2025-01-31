@@ -2,9 +2,13 @@
 
 用于将传统满文（如：ᠮᠠᠨᠵᡠ）和穆麟德（Möllendorff）转写式满文（如：manju）进行自动转换。
 
-参考：
+**参考：**
 - [Latin-Manchu-Transliteration-Tool](https://github.com/foxal/Latin-Manchu-Transliteration-Tool.git)
 - [满文转写方案](https://zh.wikipedia.org/wiki/满文转写方案)
+
+**相关：**
+- [manchu_input_transliteration](https://github.com/jungyitsai/manchu_input_transliteration)
+- [Wiktionary: Manchu transliteration](https://en.m.wiktionary.org/wiki/Wiktionary:Manchu_transliteration)
 
 ## 使用方法
 
