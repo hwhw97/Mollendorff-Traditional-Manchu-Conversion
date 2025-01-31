@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>穆麟德转写式满文和传统满文互转工具</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            /* text-align: center; */
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 28px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: black;
+        }
+        h2 {
+            color: orange;
+        }
+        textarea {
+            width: 100%;
+            font-size: 16px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: vertical;
+        }
+        button {
+            background-color: rgb(15, 224, 220);
+            border: none;
+            padding: 10px 20px;
+            color: rgb(2, 1, 1);
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease; /* 平滑过渡效果 */
+        }
+        button:hover {
+               background-color: orange; /* 鼠标悬停时的深绿色 */
+        }
+        #outputText {
+            font-size: 18px;
+            font-weight: bold;
+            color: blue;
+            background: #eef;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            word-wrap: break-word;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>穆麟德转写式满文和传统满文互转工具</h1>
+        <p style="font-size: 18px;">用于将传统满文（如：ᠮᠠᠨᠵᡠ）和穆麟德（Möllendorff）转写式满文（如：manju）进行自动转换。</p>
+        <p style="font-size: 18px;">使用之前，请查看说明：</p>
+        <!-- 可折叠部分 -->
+        <details style="font-size: 16px; margin-top: 10px;">
+            <summary style="font-size: 18px; font-weight: bold; cursor: pointer; color: orange; margin-bottom: 5px;">点击此处展开/收起说明</summary>
+            <ul style="font-size: 16px;">
+                <li>穆麟德转写中的特殊字符（ž、š、ū）需要如实输入（可以复制粘贴）</li>
+                <li>例如，直接输入 “<code>hūwang wei.</code>” </li>
+                <li>本工具也支持直接输入<strong>传统满文</strong>，将自动转换为穆麟德式满文</li>
+                <li>本工具采用的传统满文字符及其与穆麟德转写的对应关系如下：</li>
+                    <ul>
+                        <li>ᠠ(a), ᡝ(e), ᡳ(i), ᠣ(o), ᡠ(u), ᡡ(ū), ᡴ(k), ᡤ(g), ᡥ(h), ᠪ(b), ᡦ(p), </li>
+                        <li>ᠰ(s), ᡧ(š), ᡨ᠋(t), ᡩ(d), ᠯ(l), ᠮ(m), ᠨ(n), ᠩ(ng), ᠴ(c), ᠵ(j), ᠶ(y), </li>
+                        <li>ᡵ(r), ᡶ(f), ᠸ(w), ᠺ(k'), ᡬ(g'), ᡭ(h'), ᡮ(ts'), ᡮᡟ(ts), ᡯ(dz), ᡯᡳ᠌(dzi), </li>
+                        <li>ᡰ(ž), ᠰᡟ(sy), ᡱᡳ(c'y), ᡷᡳ(jy), ᠈(,), ᠉(.)</li>
+                    </ul>
+            </ul>
+        </details>
+        <hr style="border: 0.9px solid orange;">
+
+        <h2>输入:</h2>
+        <textarea id="inputText" rows="3" placeholder="输入穆麟德满文或传统满文。。。"></textarea><br>
+        <button onclick="convert()">点此转换</button>
+
+        <h2>转换结果:</h2>
+        <textarea id="outputText" rows="3" ></textarea><br>
+    </div>
+
+    <p class="footer">由 <a href="https://github.com/hwhw97/Mollendorff-Traditional-Manchu-Conversion" target="_blank">黄玮</a> 提供 | 2025-02-01 | v1.0.0 </p>
+
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.23.4/full/pyodide.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>

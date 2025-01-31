@@ -12,11 +12,18 @@
 
 ## 使用方法
 
+### 在线使用 Demo
+点击使用在线版 [Demo](https://hwhw97.github.io/manchu-converter/Mollendorff-Traditional-Manchu-Conversion)
+
+Demo 更新记录
+- 2025-02-01 | v1.0.0
+  > 初始版本
+
+### 在 python 中调用
 ```bash
 git clone https://github.com/hwhw97/Mollendorff-Traditional-Manchu-Conversion.git
 cd Mollendorff-Traditional-Manchu-Conversion
 ```
-
 
 - 自动识别输入的文本是传统满文还是穆麟德转写式满文，并互相转换
 ```python
