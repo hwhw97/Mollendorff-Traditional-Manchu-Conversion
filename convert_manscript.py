@@ -71,7 +71,7 @@ def manscript2mulinde(manjuword):
         "N":"ᠩ", 
         "k":"ᡴ", "g":"ᡤ", "h":"ᡥ",
         "b":"ᠪ", "p":"ᡦ", "s":"ᠰ", "š":"ᡧ",
-        "t":"ᡨ᠋", "t":"ᡨ", "d":"ᡩ", "d":"ᡩ᠋", "l":"ᠯ", "m":"ᠮ",
+        "l":"ᠯ", "m":"ᠮ",
         "c":"ᠴ", "j":"ᠵ", "y":"ᠶ", "r":"ᡵ",
         "f":"ᡶ", "w":"ᠸ", "k'":"ᠺ", "g'":"ᡬ",
         "h'":"ᡭ", "ts'":"ᡮ", "ts":"ᡮᡟ", "dz":"ᡯ",
@@ -82,6 +82,10 @@ def manscript2mulinde(manjuword):
     }
     # 创建反向映射字典
     reversed_dict = {v: k for k, v in ManchuScript_Latin_map.items()}
+    reversed_dict["ᡨ᠋"] = "t"
+    reversed_dict["ᡨ"] = "t"
+    reversed_dict["ᡩ᠋"] = "d"
+    reversed_dict["ᡩ"] = "d"
     i = 0
     latinword = ''
     while i < len(manjuword):
