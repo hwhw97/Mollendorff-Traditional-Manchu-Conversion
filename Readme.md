@@ -11,12 +11,22 @@
 - [Wiktionary: Manchu transliteration](https://en.m.wiktionary.org/wiki/Wiktionary:Manchu_transliteration)
 
 ## 使用方法
+```text
+穆麟德转写中的特殊字符（ž、š、ū）可以直接在文本框输入，也可以基于如下规则输入：
+    输入 zv 将自动替换为 ž
+    输入 sv 将自动替换为 š
+    输入 uv 将自动替换为 ū
+例如，可以直接输入 “hūwang wei.” 也可以输入 “huvwang wei.”。
+```
 
 ### 在线使用 Demo
 点击使用在线版 [Demo](https://hwhw97.github.io/Mollendorff-Traditional-Manchu-Conversion)
 
 
 Demo 更新记录
+- 2025-02-08 | v2.0.0
+  > 处理穆麟德转写特殊字符输入：
+    输入 zv 将自动替换为 ž，输入 sv 将自动替换为 š，输入 zv 将自动替换为 ž
 - 2025-02-04 | v1.1.0
   > 优化 t、d 的转写
 - 2025-02-01 | v1.0.0

@@ -1,5 +1,17 @@
 import re
 
+def replace_special_characters(text):
+    """用于处理用户输入的穆麟德转写特殊字符
+    """
+    replacements = {
+        'zv': 'ž',
+        'sv': 'š',
+        'uv': 'ū'
+    }
+    for pattern, replacement in replacements.items():
+        text = text.replace(pattern, replacement)
+    return text
+
 def deal_special_Latin(word):
     """
     初步处理 拉丁转写 便于后续转为传统满文
@@ -124,6 +136,7 @@ def convert_manscript(text):
     """
     根据输入的文本类型调用相应的转换函数。
     """
+    text = replace_special_characters(text)
     script_type = detect_script(text)
     if script_type == "manscript":
         return manscript2mulinde(text)
@@ -137,6 +150,7 @@ def convert_manscript2(text):
     根据输入的文本类型调用相应的转换函数。
     如果输入的是穆麟德，则不转，如果输入的是传统满文，则转为穆麟德
     """
+    text = replace_special_characters(text)
     script_type = detect_script(text)
     if script_type == "manscript":
         return manscript2mulinde(text)
